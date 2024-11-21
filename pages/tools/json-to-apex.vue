@@ -1,4 +1,11 @@
 <script setup>
+useSeoMeta({
+  title: 'JSON To Apex',
+  ogTitle: 'JSON To Apex',
+  description: 'JSON to Apex converts JSON into Salesforce wrapper classes, simplifying integration and data handling..',
+  ogDescription: 'JSON to Apex converts JSON into Salesforce wrapper classes, simplifying integration and data handling..',
+});
+
 import { ref, watch } from 'vue';
 import CopyIcon from '../../components/icons/CopyIcon.vue';
 import ResetIcon from '../../components/icons/ResetIcon.vue';

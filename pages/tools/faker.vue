@@ -1,9 +1,15 @@
 <script setup>
+useSeoMeta({
+  title: 'Random Data Generator',
+  ogTitle: 'Random Data Generator',
+  description: 'Random Data Generator creates realistic mock data instantly, streamlining testing and development workflows.',
+  ogDescription: 'Random Data Generator creates realistic mock data instantly, streamlining testing and development workflows.',
+});
+
 import { ref, computed, onMounted } from 'vue';
 import { faker, allFakers, allLocales } from '@faker-js/faker';
 import { LOCALE_NAMES } from '~/utils/data/localeConstants';
 import RandExp from 'randexp';
-
 
 const localeOptions = computed(() => {
   const options = {};

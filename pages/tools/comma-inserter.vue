@@ -1,4 +1,10 @@
 <script setup>
+useSeoMeta({
+    title: 'SOQL IN Clause Comma Inserter',
+    ogTitle: 'SOQL IN Clause Comma Inserter',
+    description: 'SOQL IN Clause Comma Inserter formats values for SOQL IN clauses, making Salesforce query building fast and effortless.',
+    ogDescription: 'SOQL IN Clause Comma Inserter formats values for SOQL IN clauses, making Salesforce query building fast and effortless.',
+});
 import { ref } from "vue";
 import CopyIcon from '../../components/icons/CopyIcon.vue';
 import ResetIcon from '../../components/icons/ResetIcon.vue';
@@ -54,7 +60,8 @@ const copyData = async () => {
 <template>
 
     <PageTitle class="text-2xl font-bold">SOQL IN Clause Comma Inserter</PageTitle>
-    <InputLabel class="text-normal font-thin">Enter values one after another on separate line to get proper formatted data.</InputLabel>
+    <InputLabel class="text-normal font-thin">Enter values one after another on separate line to get proper formatted
+        data.</InputLabel>
     <div class="space-y-4 mt-6">
         <!-- Input Section -->
         <div>
