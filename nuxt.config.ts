@@ -11,5 +11,13 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
+  css: ['~/assets/css/main.css'],
+
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
   devtools: { enabled: false }
 })
