@@ -1,0 +1,1 @@
+import{o as e,c as t,e as o,t as n,I as l}from"./Ho11KFCP.js";const r={class:"block font-semibold text-base text-gray-700 dark:text-gray-300"},c={key:0},_={key:1},p={__name:"InputLabel",props:{value:String},setup(a){return(s,i)=>(e(),t("label",r,[o(n(a.value)+" ",1),a.value?(e(),t("span",c)):(e(),t("span",_,[l(s.$slots,"default")]))]))}};export{p as _};

@@ -1,1 +1,0 @@
-import{_ as n}from"./DKdbtDBt.js";import{_ as a,c as r,a as e,b as s,w as _,o as c,d as l}from"./OlXZGO3Y.js";const u={};function m(d,t){const o=n;return c(),r("main",null,[e("div",null,[t[1]||(t[1]=e("h1",null,"About",-1)),s(o,{to:"/"},{default:_(()=>t[0]||(t[0]=[l("Home")])),_:1})])])}const p=a(u,[["render",m]]);export{p as default};
