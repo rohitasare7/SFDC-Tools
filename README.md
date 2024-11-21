@@ -1,75 +1,22 @@
-# Nuxt Minimal Starter
+Here is how to deploy a Nuxt 3 project on GitHub Pages:
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+# How to
 
-## Setup
+1. Install dev dependency `gh-pages`
+2. Add the script `"deploy": "gh-pages -d dist"` in package.json file
+3. Specifiy app `baseURL` in nuxt.config.ts
+4. Specifiy `buildAssetsDir` in nuxt.config.ts that doesn't start with an underscore `_`. See the router config example below
+5. Create an empty file `.nojekyll` at the root of the project
+6. Generate with `npm run generate`
+7. Deploy with `npm run deploy`
 
-Make sure to install dependencies:
+Router config:
 
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+```ts
+export default defineNuxtConfig({
+  app: {
+    baseURL: '/nuxt-github-pages/', // baseURL: '/<repository>/'
+    buildAssetsDir: 'assets', // don't use "_" at the begining of the folder name to avoids nojkill conflict
+  }
+}
 ```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
