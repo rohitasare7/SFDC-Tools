@@ -1,1 +1,0 @@
-import{_ as n}from"./COfCMPzG.js";import{a,c as r,b as t,d as s,w as _,o as c,e as l}from"./DJd4Cma8.js";const u={};function d(m,e){const o=n;return c(),r("main",null,[t("div",null,[e[1]||(e[1]=t("h1",null,"Home",-1)),s(o,{to:"/about"},{default:_(()=>e[0]||(e[0]=[l("About")])),_:1})])])}const x=a(u,[["render",d]]);export{x as default};
