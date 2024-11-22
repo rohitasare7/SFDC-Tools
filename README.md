@@ -1,6 +1,6 @@
-Here is how to deploy a Nuxt 3 project on GitHub Pages:
+Here is how to deploy this project on GitHub Pages:
 
-# How to
+### Steps
 
 1. Install dev dependency `gh-pages`
 2. Add the script `"deploy": "gh-pages -d dist"` in package.json file
@@ -10,7 +10,7 @@ Here is how to deploy a Nuxt 3 project on GitHub Pages:
 6. Generate with `npm run generate`
 7. Deploy with `npm run deploy`
 
-Router config:
+### Router config:
 
 ```ts
 export default defineNuxtConfig({
@@ -21,5 +21,12 @@ export default defineNuxtConfig({
 }
 ```
 
+```sh
 npx npm-check-updates -u
+```
+
+```sh
 npm install
+```
+
+Visit [SFDC Tools](https://rohitasare7.github.io/SFDC-Tools)
