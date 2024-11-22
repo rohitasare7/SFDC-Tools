@@ -86,7 +86,7 @@ const copyOutput = () => {
 <template>
 
   <PageTitle class="text-2xl font-bold">OmniScript Input JSON Formatter</PageTitle>
-  <InputLabel class="text-normal font-thin">Get your OmniScript Action/Event details</InputLabel>
+  <InputLabel class="text-normal font-thin">Get your OmniScript Action/Event details - <NuxtLink class="text-blue-800 underline" to="https://www.linkedin.com/pulse/how-debug-omniscript-runtime-mode-rohitkumar-asare-im9sf/" target="_blank">Refer How to Debug OmniScript in Runtime Mode</NuxtLink> </InputLabel>
   <!-- Top Container Starts-->
 
   <div v-if="actionType || actionName" class="flex gap-4 mt-6">
