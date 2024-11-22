@@ -134,8 +134,6 @@ const formatDisplayName = (text) => {
 
 //Load Initial Data
 onMounted(() => {
-
-
   const storedLocale = localStorage.getItem('selectedLocale');
   if (storedLocale && storedLocale in localeOptions.value) {
     selectedLocale.value = storedLocale;
@@ -155,50 +153,41 @@ const saveLocaleToStorage = () => {
   addToast('Locale saved sucessfully.');
 };
 
-
 </script>
 
 <template>
-
-
   <!-- Top Container Starts-->
-  <div class="container mx-auto p-4">
-    <PageTitle class="text-2xl font-bold ">Random Data Generator</PageTitle>
-    <InputLabel class="text-normal font-thin ">Generates random data for your Unit Testing</InputLabel>
-    <div class="flex mt-8 justify-start items-center">
-      <InputLabel value="Select Locale" class="mx-0 mr-2 md:mr-4" />
-      <select id="locale-select" v-model="selectedLocale" @change="updateRandomData"
-        class="w-56 md:w-72 bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 !outline-none">
-        <option value="" disabled>Select a locale</option>
-        <option v-for="(option, locale) in localeOptions" :key="locale" :value="locale">
-          {{ option.name }}
-        </option>
-      </select>
-      <SVGIconButton @click="saveLocaleToStorage" :icon="SaveIcon" :isSquare="false" color="blue" title="Save Locale"
-        class="ml-4" />
-      <PrimaryButton @click="updateRandomData" class="ml-4">
-        Generate Data
-      </PrimaryButton>
-    </div>
+  <PageTitle class="text-2xl font-bold ">Random Data Generator</PageTitle>
+  <InputLabel class="text-normal font-thin ">Generates random data for your Unit Testing</InputLabel>
+  <div class="flex my-8 justify-start items-center">
+    <InputLabel value="Select Locale" class="mx-0 mr-2 md:mr-4" />
+    <select id="locale-select" v-model="selectedLocale" @change="updateRandomData"
+      class="w-56 md:w-72 bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 !outline-none">
+      <option value="" disabled>Select a locale</option>
+      <option v-for="(option, locale) in localeOptions" :key="locale" :value="locale">
+        {{ option.name }}
+      </option>
+    </select>
+    <SVGIconButton @click="saveLocaleToStorage" :icon="SaveIcon" :isSquare="false" color="blue" title="Save Locale"
+      class="ml-4" />
+    <PrimaryButton @click="updateRandomData" class="ml-4">
+      Generate Data
+    </PrimaryButton>
   </div>
   <!-- Top Container Ends-->
 
-  <div class="container mx-auto pb-4">
-
-    <!-- Main Random Data Container Starts -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4 md:p-0 mt-2">
-      <div v-for="(item, key) in randomData" :key="key"
-        class="p-6 bg-gray-100 border border-gray-200 rounded-lg dark:shadow-2xl dark:bg-gray-900/30 dark:border-gray-700">
-        <h3 class="text-lg font-bold mb-2 text-gray-700 dark:text-gray-300">{{ formatDisplayName(key) }}</h3>
-        <div v-for="(subItem, subKey) in item" :key="subKey" class="text-gray-700">
-          <!-- <template v-if="subKey == 'fullName'">
+  <!-- Main Random Data Container Starts -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4 md:p-0 mt-2">
+    <div v-for="(item, key) in randomData" :key="key"
+      class="p-6 bg-gray-100 border border-gray-200 rounded-lg dark:shadow-2xl dark:bg-gray-900/30 dark:border-gray-700">
+      <h3 class="text-lg font-bold mb-2 text-gray-700 dark:text-gray-300">{{ formatDisplayName(key) }}</h3>
+      <div v-for="(subItem, subKey) in item" :key="subKey" class="text-gray-700">
+        <!-- <template v-if="subKey == 'fullName'">
           </template> -->
-          <InputLabel :value="formatDisplayName(subKey)" class="my-1 text-sm" />
-          <TextInputCopyBtn :value="subItem" :displayCopyBtn="true" class="mb-4 w-full py-1.5" />
-        </div>
+        <InputLabel :value="formatDisplayName(subKey)" class="my-1 text-sm" />
+        <TextInputCopyBtn :value="subItem" :displayCopyBtn="true" class="mb-4 w-full py-1.5" />
       </div>
     </div>
-
   </div>
 
 </template>
