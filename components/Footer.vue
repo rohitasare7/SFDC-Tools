@@ -2,9 +2,8 @@
 
 </script>
 <template>
-    <footer class="md:flex md:items-center md:justify-between ">
-
-        <div class="flex space-x-6 justify-center items-center">
+    <footer class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center justify-center md:justify-start gap-6 flex-wrap">
             <a href="https://www.instagram.com/thatsalesforceguy/" target="_blank"
                 class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26" viewBox="0 0 48 48">

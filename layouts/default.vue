@@ -11,17 +11,23 @@ const toggleSidebar = () => {
 </script>
 <template>
   <ToastList />
-  <Navbar @toggle-sidebar="toggleSidebar" @clickedaa="console.log('test')" />
-  <div class="flex pt-16 overflow-hidden bg-gray-50 dark:bg-gray-900 font-Figtree">
-    <Sidebar :isSidebarVisible="isSidebarVisible" />
-    <!-- Main Page Content -->
-    <div id="main-content" class="relative w-full h-full overflow-y-auto bg-gray-50 lg:ml-64 dark:bg-gray-900 ">
-      <main
-        class="z-10 bg-white dark:bg-gray-800 overflow-hidden shadow-xl rounded-lg p-8 m-10 border dark:border-gray-700">
-        <slot />
-      </main>
-      <Footer
-        class="z-10 bg-white dark:bg-gray-800 overflow-hidden shadow-xl rounded-lg p-8 m-10 border dark:border-gray-700" />
+  <div class="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900 font-Figtree">
+    <!-- Mobile Sidebar Toggle (uncomment if needed) -->
+    <!-- <Navbar @toggle-sidebar="toggleSidebar" /> -->
+
+    <div class="flex flex-col lg:flex-row flex-1">
+      <Sidebar :isSidebarVisible="isSidebarVisible" class="lg:fixed lg:inset-y-0 lg:left-0" />
+
+      <!-- Main Content Area -->
+      <div id="main-content" class="flex-1 lg:ml-64 transition-all duration-300">
+        <main class="z-10 bg-white dark:bg-gray-800 rounded-lg p-6 m-6 border dark:border-gray-700">
+          <slot />
+        </main>
+
+
+      </div>
     </div>
+    <Footer class="z-10 bg-white dark:bg-gray-800 rounded-lg p-6 border dark:border-gray-700" />
   </div>
+
 </template>
