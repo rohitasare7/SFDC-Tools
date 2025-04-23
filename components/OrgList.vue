@@ -4,7 +4,7 @@ import { BookmarkIcon } from '@heroicons/vue/24/solid';
 import InputLabel from '~/components/InputLabel.vue';
 import IconButton from '~/components/IconButton.vue';
 import type { OrgData } from '~/utils/data/types';
-import { updateSessionDataAPI } from "~/utils/sessionManager";
+// import { updateSessionDataAPI } from "~/utils/sessionManager";
 
 //const { update, session } = await useSession();
 
@@ -39,7 +39,7 @@ const fetchOrgList = async () => {
 const saveDefaultOrg = async (permaSave: boolean) => {
     //await fetchOrgList();
     console.log('selectedOrg.value?.instance_url --> '+selectedOrg.value?.instance_url);
-    await updateSessionDataAPI({ selectedOrg: selectedOrg.value });
+    // await updateSessionDataAPI({ selectedOrg: selectedOrg.value });
     if (permaSave) {
         setDefaultOrg(selectedOrg.value?.instance_url!);
         addToast('Default org has been set.', 'Success');

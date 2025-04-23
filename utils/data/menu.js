@@ -1,4 +1,4 @@
-import { DocumentTextIcon, BoltIcon, SparklesIcon, MinusIcon, AcademicCapIcon, CubeTransparentIcon, ListBulletIcon, SquaresPlusIcon, CodeBracketIcon, PaperAirplaneIcon, SwatchIcon, ClipboardDocumentCheckIcon, CloudIcon, ClipboardDocumentListIcon, CommandLineIcon, FolderOpenIcon, Square3Stack3DIcon } from '@heroicons/vue/24/outline';
+import { BoltIcon, SparklesIcon, SwatchIcon, CloudIcon, CommandLineIcon, Square3Stack3DIcon, CodeBracketSquareIcon } from '@heroicons/vue/24/outline';
 import CommaIconVue from '~/components/icons/CommaIcon.vue.vue';
 import JSONIcon from '~/components/icons/JSONIcon.vue';
 
@@ -10,7 +10,7 @@ export default ({
                 { route: '/tools/json-to-apex', active: false, name: 'JSON to Apex', children: [], icon : JSONIcon },
                 { route: '/tools/faker', active: false, name: 'Faker', children: [], icon : SparklesIcon},
                 { route: '/tools/omniscript-input-helper', active: false, name: 'OmniScript Helper', children: [], icon : Square3Stack3DIcon},
-                { route: '/tools/testClass', active: false, name: 'Test Class Utility', children: [], icon : ClipboardDocumentCheckIcon},
+                { route: '/tools/debug-log-parser', active: false, name: 'Debug Log Parser', children: [], icon : CodeBracketSquareIcon},
                 { route: '/availableAPIs', active: false, name: 'Available APIs', children: [], icon : CommandLineIcon },
 
             ]

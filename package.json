@@ -23,7 +23,8 @@
     "randexp": "^0.5.3",
     "vue": "latest",
     "vue-codemirror": "^6.1.1",
-    "vue-router": "latest"
+    "vue-router": "latest",
+    "vue3-easy-data-table": "^1.5.47"
   },
   "devDependencies": {
     "@faker-js/faker": "^9.2.0",
