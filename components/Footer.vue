@@ -74,16 +74,13 @@
             <!-- <p class="text-gray-500 dark:text-gray-400 text-sm">Please consider bookmarking this URL for convenient and quick access in the future.</p> -->
         </div>
 
-        <p class="text-sm text-center text-gray-500 dark:text-gray-400 mt-4 md:mt-0">Hey Curious 👋 I'm <a
+        <p class="text-sm text-center text-gray-500 dark:text-gray-400 mt-4 md:mt-0">Hello 👋 I'm <a
                 href="https://rohitasare7.github.io" target="_blank"
-                class="font-semibold dark:text-gray-300 underline">Rohitkumar</a>, the creator of Salesforce Developer
-            Toolkit.
-            You can follow my work on <a href="https://www.linkedin.com/in/rohit-asare/" target="_blank"
-                class="font-semibold dark:text-gray-300 underline ml-1">LinkedIn</a>, <a
-                href="https://twitter.com/salesforceguy" target="_blank"
-                class="font-semibold dark:text-gray-300 underline">Twitter</a> and <a
+                class="font-semibold dark:text-gray-300 underline">Rohitkumar</a>.
+            Follow my work on <a href="https://www.linkedin.com/in/rohit-asare/" target="_blank"
+                class="font-semibold dark:text-gray-300 underline">LinkedIn</a> and check out my <a
                 href="https://www.youtube.com/@ThatSalesforceGuy" target="_blank"
-                class="font-semibold dark:text-gray-300 underline ">YouTube.</a></p>
+                class="font-semibold dark:text-gray-300 underline ">YouTube</a> for more!</p>
     </footer>
 
 </template>
